@@ -43,14 +43,18 @@ module Converrency
 
     [:==, :<, :>, :<=, :>=].each do |meth|
       define_method(meth) do |money|
-        amount.round(2).send(meth, money.convert_to(currency).amount.round(2))
+        rounded_amount.send(meth, money.convert_to(currency).rounded_amount)
       end
+    end
+
+    def rounded_amount
+      amount.round(2)
     end
 
     private
 
     def print_amount
-      "%.2f" % amount.round(2)      
+      "%.2f" % rounded_amount    
     end
 
     def value_in_base_currency
