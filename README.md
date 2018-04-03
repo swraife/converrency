@@ -61,3 +61,9 @@ For the purpose of this exercise, when implementing equality, you can consider t
 You might want to namespace your gem not to conflict with existing gems with the same name.
  
 Keep it simple, no need to support other features rather than these. The clearer your code the better. But please write tests or documentation whenever it makes sense. Think as if other people will have to use your gem or contribute to it.
+
+# Sam's Notes
+
+I spent about 2.5 hours on this exercise. One significant aspect that I did not adequately address is types. Namely, using Float to represent money is imprecise. I chose it since there are no listed requirements for precision, and it was easy to start with. 
+
+Second, I didn't fully consider the implications of using meta-programming to define operators as I otherwise might. Again, using it allowed me to work quickly to be able to implement the full API.
